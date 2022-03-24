@@ -10,6 +10,12 @@ class Teniser extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime_prezime',
+        'pozicija',
+        'broj_titula',
+    ];
+
     public function treneri()
     {
         return $this->hasMany(Trener::class);

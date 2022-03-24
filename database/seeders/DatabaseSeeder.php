@@ -3,6 +3,10 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\SeederDrzava;
+use Database\Seeders\SeederTrener;
+use Database\Seeders\SeederTeniser;
+
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +17,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        $drs = new SeederDrzava();
+        $trs = new SeederTrener();
+        $tes = new SeederTeniser();
+
+        $drs->run();
+        $trs->run();
+        $tes->run();
     }
 }

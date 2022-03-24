@@ -11,6 +11,13 @@ class Trener extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'ime_prezime',
+        'drzava_id',
+        'teniser_id',
+    ];
+
+
     public function drzava()
     {
         return $this->belongsTo(Drzava::class);
